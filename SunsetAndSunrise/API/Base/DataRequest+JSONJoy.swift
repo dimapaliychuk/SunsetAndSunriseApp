@@ -1,9 +1,9 @@
 //
 //  DataRequest+JSONJoy.swift
-//  Imago
+//  SunsetAndSunrise
 //
-//  Created by Dima Paliychuk on 8/23/17.
-//  Copyright © 2017 StarGo. All rights reserved.
+//  Created by Dima Paliychuk on 4/18/18.
+//  Copyright © 2018 Dima Paliychuk. All rights reserved.
 //
 
 import Alamofire
@@ -54,7 +54,7 @@ extension DataRequest {
                 } else {
                     completionHandler(
                         Result.failure(
-                            ServiceError.responseNoErrorNoData()
+                            ServiceError()
                         )
                     )
                 }

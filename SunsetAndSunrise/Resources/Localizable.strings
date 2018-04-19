@@ -5,3 +5,18 @@
   Created by Dima Paliychuk on 4/18/18.
   Copyright © 2018 Dima Paliychuk. All rights reserved.
 */
+
+"current_location" = "Current location";
+"select_location" = "Select location";
+"sunrise_sunset_information" = "Sunrise and sunset information for ";
+"sunrise" = "sunrise";
+"sunset" = "sunset";
+"solar_noon" = "solar noon";
+"day_length" = "day length";
+"civil_twilight_begin" = "civil twilight begin";
+"civil_twilight_end" = "civil twilight end";
+"nautical_twilight_begin" = "nautical twilight begin";
+"nautical_twilight_end" = "nautical twilight end";
+"astronomical_twilight_begin" = "astronomical twilight begin";
+"astronomical_twilight_end" = "astronomical twilight end";
+

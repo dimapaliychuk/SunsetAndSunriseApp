@@ -8,7 +8,6 @@
 
 import UIKit
 import GooglePlaces
-import CoreLocation
 import PKHUD
 
 class SunsetAndSunriseViewController: UIViewController {
@@ -19,16 +18,7 @@ class SunsetAndSunriseViewController: UIViewController {
     @IBOutlet private weak var selectLocationButton: UIButton!
     
     private var placesClient: GMSPlacesClient!
-    private var locationManager = CLLocationManager()
-    private var infoModel: InfoModel? {
-        didSet{
-            if let info = infoModel {
-                descriptionLabel.text = getDescriptionFrom(infoModel: info)
-            } else {
-                descriptionLabel.text = ""
-            }
-        }
-    }
+    private var locationManager = LocationManager()
     
     
     //MARK: life cycle
@@ -50,34 +40,43 @@ class SunsetAndSunriseViewController: UIViewController {
     }
     
     private func setup() {
-        self.locationManager.requestAlwaysAuthorization()
-        self.locationManager.requestWhenInUseAuthorization()
-        if CLLocationManager.locationServicesEnabled() {
-            locationManager.delegate = self
-            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
-            locationManager.startUpdatingLocation()
-        }
-        
+        locationManager.requestAuthorization()
         placesClient = GMSPlacesClient.shared()
     }
     
-    private func getDescriptionFrom(infoModel: InfoModel) -> String {
-        var str = ""
+    private func getInfoModelForm(place: GMSPlace) {
+        informationLabel.text = "sunrise_sunset_information".localized + place.name
+        API.shared.getDescriptionFor(coordinate: place.coordinate,
+                                     completion: { [weak self] (result) in
+                                        guard let infoModel = result.value?.results else {
+                                            HUD.flash(.error, delay: 1.0)
+                                            return
+                                        }
+                                        HUD.flash(.success, delay: 1.0)
+                                        self?.setDescriptionFrom(infoModel: infoModel)
+        })
+    }
+    
+    private func setDescriptionFrom(infoModel: InfoModel) {
+        var description = ""
         
-        str += "sunrise".localized + " : " + infoModel.sunrise + "\n"
-        str += "sunset".localized + " : " + infoModel.sunset + "\n"
-        str += "solar_noon".localized + " : " + infoModel.solarNoon + "\n"
-        str += "day_length".localized + " : " + infoModel.dayLength + "\n"
-        str += "civil_twilight_begin".localized + " : " + infoModel.civilTwilightBegin + "\n"
-        str += "civil_twilight_end".localized + " : " + infoModel.civilTwilightEnd + "\n"
-        str += "nautical_twilight_begin".localized + " : " + infoModel.nauticalTwilightBegin + "\n"
-        str += "nautical_twilight_end".localized + " : " + infoModel.nauticalTwilightEnd + "\n"
-        str += "astronomical_twilight_begin".localized + " : " +
+        description += "sunrise".localized + " : " + infoModel.sunrise + "\n"
+        description += "sunset".localized + " : " + infoModel.sunset + "\n"
+        description += "solar_noon".localized + " : " + infoModel.solarNoon + "\n"
+        description += "day_length".localized + " : " + infoModel.dayLength + "\n"
+        description += "civil_twilight_begin".localized + " : " +
+            infoModel.civilTwilightBegin + "\n"
+        description += "civil_twilight_end".localized + " : " + infoModel.civilTwilightEnd + "\n"
+        description += "nautical_twilight_begin".localized + " : " +
+            infoModel.nauticalTwilightBegin + "\n"
+        description += "nautical_twilight_end".localized + " : " +
+            infoModel.nauticalTwilightEnd + "\n"
+        description += "astronomical_twilight_begin".localized + " : " +
             infoModel.astronomicalTwilightBegin + "\n"
-        str += "astronomical_twilight_end".localized + " : " +
+        description += "astronomical_twilight_end".localized + " : " +
             infoModel.astronomicalTwilightEnd + "\n"
         
-        return str
+        descriptionLabel.text = description
     }
     
     
@@ -104,25 +103,8 @@ class SunsetAndSunriseViewController: UIViewController {
                     return
             }
             
-            self?.informationLabel.text = "unrise_sunset_information".localized + place.name
-            API.shared.getDescriptionFor(coordinate: place.coordinate,
-                                         completion: { [weak self] (result) in
-                                            guard let infoModel = result.value?.results else {
-                                                HUD.flash(.error, delay: 1.0)
-                                                return
-                                            }
-                                            HUD.flash(.success, delay: 1.0)
-                                            self?.infoModel = infoModel
-            })
+            self?.getInfoModelForm(place: place)
         })
-    }
-}
-
-
-extension SunsetAndSunriseViewController: CLLocationManagerDelegate {
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
-        print("locations = \(locValue.latitude) \(locValue.longitude)")
     }
 }
 
@@ -132,16 +114,7 @@ extension SunsetAndSunriseViewController: GMSAutocompleteViewControllerDelegate 
     // Handle the user's selection.
     func viewController(_ viewController: GMSAutocompleteViewController,
                         didAutocompleteWith place: GMSPlace) {
-        informationLabel.text = "unrise_sunset_information".localized + place.name
-        API.shared.getDescriptionFor(coordinate: place.coordinate,
-                                     completion: { [weak self] (result) in
-                                        guard let infoModel = result.value?.results else {
-                                            HUD.flash(.error, delay: 1.0)
-                                            return
-                                        }
-                                        HUD.flash(.success, delay: 1.0)
-                                        self?.infoModel = infoModel
-        })
+        getInfoModelForm(place: place)
         dismiss(animated: true, completion: nil)
     }
     

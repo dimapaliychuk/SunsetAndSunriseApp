@@ -7,13 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2213C31BDCC4AE1A519D2BB0 /* Pods_SunsetAndSunrise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A0B72B66FD222FC6A9AB63F /* Pods_SunsetAndSunrise.framework */; };
+		3236A1DC2087B5D800B86D13 /* String+localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3236A1DB2087B5D800B86D13 /* String+localized.swift */; };
+		3236A1E02087B6E300B86D13 /* JSONKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3236A1DE2087B6E300B86D13 /* JSONKeys.swift */; };
+		3236A1E12087B6E300B86D13 /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3236A1DF2087B6E300B86D13 /* ServiceError.swift */; };
+		3236A1E32087B82000B86D13 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3236A1E22087B82000B86D13 /* Constants.swift */; };
+		3236A1E52087B8B500B86D13 /* InfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3236A1E42087B8B500B86D13 /* InfoModel.swift */; };
+		3236A1EA2087BF4000B86D13 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3236A1E82087BF4000B86D13 /* BaseService.swift */; };
+		3236A1EB2087BF4000B86D13 /* DataRequest+JSONJoy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3236A1E92087BF4000B86D13 /* DataRequest+JSONJoy.swift */; };
+		3236A1F02087BF7500B86D13 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3236A1EF2087BF7500B86D13 /* API.swift */; };
+		32600D8C2087E4E800011A6D /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32600D8B2087E4E800011A6D /* LocationManager.swift */; };
 		3289795E20877F8D0003E94F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3289795D20877F8D0003E94F /* AppDelegate.swift */; };
-		3289796020877F8D0003E94F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3289795F20877F8D0003E94F /* ViewController.swift */; };
+		3289796020877F8D0003E94F /* SunsetAndSunriseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3289795F20877F8D0003E94F /* SunsetAndSunriseViewController.swift */; };
 		3289796320877F8D0003E94F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3289796120877F8D0003E94F /* Main.storyboard */; };
 		3289796520877F8D0003E94F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3289796420877F8D0003E94F /* Assets.xcassets */; };
 		3289796820877F8D0003E94F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3289796620877F8D0003E94F /* LaunchScreen.storyboard */; };
-		3289797320877F8D0003E94F /* SunsetAndSunriseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3289797220877F8D0003E94F /* SunsetAndSunriseTests.swift */; };
-		3289797E20877F8D0003E94F /* SunsetAndSunriseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3289797D20877F8D0003E94F /* SunsetAndSunriseUITests.swift */; };
+		3289798D208781780003E94F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3289798C208781780003E94F /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,19 +43,30 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3236A1DB2087B5D800B86D13 /* String+localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+localized.swift"; sourceTree = "<group>"; };
+		3236A1DE2087B6E300B86D13 /* JSONKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONKeys.swift; sourceTree = "<group>"; };
+		3236A1DF2087B6E300B86D13 /* ServiceError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
+		3236A1E22087B82000B86D13 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		3236A1E42087B8B500B86D13 /* InfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoModel.swift; sourceTree = "<group>"; };
+		3236A1E82087BF4000B86D13 /* BaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
+		3236A1E92087BF4000B86D13 /* DataRequest+JSONJoy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DataRequest+JSONJoy.swift"; sourceTree = "<group>"; };
+		3236A1EF2087BF7500B86D13 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		32600D8B2087E4E800011A6D /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		3289795A20877F8D0003E94F /* SunsetAndSunrise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SunsetAndSunrise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3289795D20877F8D0003E94F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3289795F20877F8D0003E94F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3289795F20877F8D0003E94F /* SunsetAndSunriseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunsetAndSunriseViewController.swift; sourceTree = "<group>"; };
 		3289796220877F8D0003E94F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3289796420877F8D0003E94F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3289796720877F8D0003E94F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3289796920877F8D0003E94F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3289796E20877F8D0003E94F /* SunsetAndSunriseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SunsetAndSunriseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3289797220877F8D0003E94F /* SunsetAndSunriseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunsetAndSunriseTests.swift; sourceTree = "<group>"; };
-		3289797420877F8D0003E94F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3289797920877F8D0003E94F /* SunsetAndSunriseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SunsetAndSunriseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3289797D20877F8D0003E94F /* SunsetAndSunriseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunsetAndSunriseUITests.swift; sourceTree = "<group>"; };
-		3289797F20877F8D0003E94F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3289798C208781780003E94F /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		8A0B72B66FD222FC6A9AB63F /* Pods_SunsetAndSunrise.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SunsetAndSunrise.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D680F17D6949161A8F42CD6 /* Pods_SunsetAndSunriseUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SunsetAndSunriseUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B42D7CA92C6A302949BC6BB5 /* Pods-SunsetAndSunrise.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SunsetAndSunrise.release.xcconfig"; path = "Pods/Target Support Files/Pods-SunsetAndSunrise/Pods-SunsetAndSunrise.release.xcconfig"; sourceTree = "<group>"; };
+		C068710DF46D5C242F3F237B /* Pods_SunsetAndSunriseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SunsetAndSunriseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8248A4D38B6AB282352F6C4 /* Pods-SunsetAndSunrise.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SunsetAndSunrise.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SunsetAndSunrise/Pods-SunsetAndSunrise.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2213C31BDCC4AE1A519D2BB0 /* Pods_SunsetAndSunrise.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,13 +95,57 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3236A1D92087B5A000B86D13 /* Extensions & Utils */ = {
+			isa = PBXGroup;
+			children = (
+				3236A1DB2087B5D800B86D13 /* String+localized.swift */,
+			);
+			path = "Extensions & Utils";
+			sourceTree = "<group>";
+		};
+		3236A1DD2087B6C900B86D13 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3236A1DE2087B6E300B86D13 /* JSONKeys.swift */,
+				3236A1DF2087B6E300B86D13 /* ServiceError.swift */,
+				3236A1E42087B8B500B86D13 /* InfoModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3236A1E62087BF2100B86D13 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				3236A1EF2087BF7500B86D13 /* API.swift */,
+				3236A1E72087BF2F00B86D13 /* Base */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		3236A1E72087BF2F00B86D13 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				3236A1E82087BF4000B86D13 /* BaseService.swift */,
+				3236A1E92087BF4000B86D13 /* DataRequest+JSONJoy.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		32600D8A2087E4D500011A6D /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				32600D8B2087E4E800011A6D /* LocationManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		3289795120877F8D0003E94F = {
 			isa = PBXGroup;
 			children = (
 				3289795C20877F8D0003E94F /* SunsetAndSunrise */,
-				3289797120877F8D0003E94F /* SunsetAndSunriseTests */,
-				3289797C20877F8D0003E94F /* SunsetAndSunriseUITests */,
 				3289795B20877F8D0003E94F /* Products */,
+				E0698BEC5066F3C1A69AB607 /* Pods */,
+				D9B87C82273F5E0C5080C113 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,32 +162,87 @@
 		3289795C20877F8D0003E94F /* SunsetAndSunrise */ = {
 			isa = PBXGroup;
 			children = (
-				3289795D20877F8D0003E94F /* AppDelegate.swift */,
-				3289795F20877F8D0003E94F /* ViewController.swift */,
-				3289796120877F8D0003E94F /* Main.storyboard */,
-				3289796420877F8D0003E94F /* Assets.xcassets */,
-				3289796620877F8D0003E94F /* LaunchScreen.storyboard */,
-				3289796920877F8D0003E94F /* Info.plist */,
+				32897991208781D30003E94F /* Main */,
+				32897992208781E40003E94F /* VC */,
+				3289798F208781AF0003E94F /* UI */,
+				3236A1DD2087B6C900B86D13 /* Models */,
+				3236A1E62087BF2100B86D13 /* API */,
+				32600D8A2087E4D500011A6D /* Managers */,
+				3236A1D92087B5A000B86D13 /* Extensions & Utils */,
+				3289798B208781350003E94F /* Resources */,
+				3289798E2087818F0003E94F /* Supporting Files */,
 			);
 			path = SunsetAndSunrise;
 			sourceTree = "<group>";
 		};
-		3289797120877F8D0003E94F /* SunsetAndSunriseTests */ = {
+		3289798B208781350003E94F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				3289797220877F8D0003E94F /* SunsetAndSunriseTests.swift */,
-				3289797420877F8D0003E94F /* Info.plist */,
+				3289796420877F8D0003E94F /* Assets.xcassets */,
+				3289798C208781780003E94F /* Localizable.strings */,
 			);
-			path = SunsetAndSunriseTests;
+			path = Resources;
 			sourceTree = "<group>";
 		};
-		3289797C20877F8D0003E94F /* SunsetAndSunriseUITests */ = {
+		3289798E2087818F0003E94F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				3289797D20877F8D0003E94F /* SunsetAndSunriseUITests.swift */,
-				3289797F20877F8D0003E94F /* Info.plist */,
+				3289796920877F8D0003E94F /* Info.plist */,
 			);
-			path = SunsetAndSunriseUITests;
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3289798F208781AF0003E94F /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				32897990208781BC0003E94F /* Storyboards */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		32897990208781BC0003E94F /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				3289796120877F8D0003E94F /* Main.storyboard */,
+				3289796620877F8D0003E94F /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		32897991208781D30003E94F /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				3289795D20877F8D0003E94F /* AppDelegate.swift */,
+				3236A1E22087B82000B86D13 /* Constants.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		32897992208781E40003E94F /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				3289795F20877F8D0003E94F /* SunsetAndSunriseViewController.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		D9B87C82273F5E0C5080C113 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8A0B72B66FD222FC6A9AB63F /* Pods_SunsetAndSunrise.framework */,
+				C068710DF46D5C242F3F237B /* Pods_SunsetAndSunriseTests.framework */,
+				8D680F17D6949161A8F42CD6 /* Pods_SunsetAndSunriseUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E0698BEC5066F3C1A69AB607 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C8248A4D38B6AB282352F6C4 /* Pods-SunsetAndSunrise.debug.xcconfig */,
+				B42D7CA92C6A302949BC6BB5 /* Pods-SunsetAndSunrise.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,9 +252,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3289798220877F8D0003E94F /* Build configuration list for PBXNativeTarget "SunsetAndSunrise" */;
 			buildPhases = (
+				C3D06A367257B8BA551D061D /* [CP] Check Pods Manifest.lock */,
 				3289795620877F8D0003E94F /* Sources */,
 				3289795720877F8D0003E94F /* Frameworks */,
 				3289795820877F8D0003E94F /* Resources */,
+				6470264C22A751687F253B4B /* [CP] Embed Pods Frameworks */,
+				31B603B8B5B910726B73224C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -194,6 +317,11 @@
 					3289795920877F8D0003E94F = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 					3289796D20877F8D0003E94F = {
 						CreatedOnToolsVersion = 9.2;
@@ -233,6 +361,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3289796820877F8D0003E94F /* LaunchScreen.storyboard in Resources */,
+				3289798D208781780003E94F /* Localizable.strings in Resources */,
 				3289796520877F8D0003E94F /* Assets.xcassets in Resources */,
 				3289796320877F8D0003E94F /* Main.storyboard in Resources */,
 			);
@@ -254,13 +383,81 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		31B603B8B5B910726B73224C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SunsetAndSunrise/Pods-SunsetAndSunrise-resources.sh",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SunsetAndSunrise/Pods-SunsetAndSunrise-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6470264C22A751687F253B4B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SunsetAndSunrise/Pods-SunsetAndSunrise-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SunsetAndSunrise/Pods-SunsetAndSunrise-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C3D06A367257B8BA551D061D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SunsetAndSunrise-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3289795620877F8D0003E94F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3289796020877F8D0003E94F /* ViewController.swift in Sources */,
+				3236A1F02087BF7500B86D13 /* API.swift in Sources */,
+				3236A1EA2087BF4000B86D13 /* BaseService.swift in Sources */,
+				3236A1E12087B6E300B86D13 /* ServiceError.swift in Sources */,
+				3289796020877F8D0003E94F /* SunsetAndSunriseViewController.swift in Sources */,
+				3236A1DC2087B5D800B86D13 /* String+localized.swift in Sources */,
 				3289795E20877F8D0003E94F /* AppDelegate.swift in Sources */,
+				3236A1E52087B8B500B86D13 /* InfoModel.swift in Sources */,
+				3236A1E02087B6E300B86D13 /* JSONKeys.swift in Sources */,
+				32600D8C2087E4E800011A6D /* LocationManager.swift in Sources */,
+				3236A1EB2087BF4000B86D13 /* DataRequest+JSONJoy.swift in Sources */,
+				3236A1E32087B82000B86D13 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +465,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3289797320877F8D0003E94F /* SunsetAndSunriseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,7 +472,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3289797E20877F8D0003E94F /* SunsetAndSunriseUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,10 +619,12 @@
 		};
 		3289798320877F8D0003E94F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8248A4D38B6AB282352F6C4 /* Pods-SunsetAndSunrise.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = SunsetAndSunrise/Info.plist;
+				DEVELOPMENT_TEAM = 6RCV4Y4RAC;
+				INFOPLIST_FILE = "$(SRCROOT)/SunsetAndSunrise/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.paliychukdima.SunsetAndSunrise;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -438,10 +635,12 @@
 		};
 		3289798420877F8D0003E94F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B42D7CA92C6A302949BC6BB5 /* Pods-SunsetAndSunrise.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = SunsetAndSunrise/Info.plist;
+				DEVELOPMENT_TEAM = 6RCV4Y4RAC;
+				INFOPLIST_FILE = "$(SRCROOT)/SunsetAndSunrise/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.paliychukdima.SunsetAndSunrise;
 				PRODUCT_NAME = "$(TARGET_NAME)";

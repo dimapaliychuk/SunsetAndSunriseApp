@@ -1,26 +1,22 @@
 //
-//  ServiceModel.swift
-//  Imago
+//  ServiceError.swift
+//  SunsetAndSunrise
 //
-//  Created by Dima Paliychuk on 8/23/17.
-//  Copyright © 2017 StarGo. All rights reserved.
+//  Created by Dima Paliychuk on 4/18/18.
+//  Copyright © 2018 Dima Paliychuk. All rights reserved.
 //
+
 
 import Foundation
 
 
-private let statusSuccess = "success"
-private let statusError = "error"
-
-
-class ServiceError: Error, Codable {//, JSONJoy {
+class ServiceError: Error, Codable {
     
     fileprivate var status: String?
-    var message: String?
-    var code: Int?
     
-    init(message: String) {
-        self.message = message
+    // compiler generated
+    private enum CodingKeys: String, CodingKey {
+        case status = "status"
     }
     
     var isSuccess: Bool {
@@ -31,34 +27,4 @@ class ServiceError: Error, Codable {//, JSONJoy {
     }
 }
 
-
-extension ServiceError {
-    
-    class func responseNoErrorNoData() -> ServiceError {
-        let message = "Server could not be reached"
-        
-        let serviceError = ServiceError(message: message)
-        serviceError.status = statusError
-        
-        return serviceError
-    }
-    
-    class func noMyUserId() -> ServiceError {
-        let message = "No user id found"
-        
-        let serviceError = ServiceError(message: message)
-        serviceError.status = statusError
-        
-        return serviceError
-    }
-    
-    class func badRequest() -> ServiceError {
-        let message = "Bad request."
-        
-        let serviceError = ServiceError(message: message)
-        serviceError.status = statusError
-        
-        return serviceError
-    }
-}
 

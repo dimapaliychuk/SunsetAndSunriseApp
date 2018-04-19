@@ -1,33 +1,31 @@
 //
 //  API.swift
-//  Imago
+//  SunsetAndSunrise
 //
-//  Created by Dima Paliychuk on 8/23/17.
-//  Copyright © 2017 StarGo. All rights reserved.
+//  Created by Dima Paliychuk on 4/18/18.
+//  Copyright © 2018 Dima Paliychuk. All rights reserved.
 //
+
 
 import Foundation
+import Alamofire
+import CoreLocation
 
 
-class API {
+class API: BaseService {
     
-    static var user: UserService {
-        return UserService.shared
-    }
+    static let shared = API()
     
-    static var users: UsersService {
-        return UsersService.shared
-    }
-    
-    static var settings: SettingsService {
-        return SettingsService.shared
-    }
-    
-    static var places: PlacesService {
-        return PlacesService.shared
-    }
-    
-    static var notification: NotificationService {
-        return NotificationService.shared
+    func getDescriptionFor(coordinate: CLLocationCoordinate2D,
+                        completion: @escaping (_ result: Result<InfoResponseModel>)->Void) {
+        executeRequest(
+            method: .get,
+            encoding: URLEncoding.default,
+            parameters: [
+                JSONKeys.lat : Double(coordinate.latitude),
+                JSONKeys.lng : Double(coordinate.longitude)
+            ],
+            completionHandler: completion
+        )
     }
 }
